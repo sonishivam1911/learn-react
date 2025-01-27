@@ -1,18 +1,27 @@
+import { useState } from 'react';
+
 export default function Form() {
-  let firstName = '';
-  let lastName = '';
+
+  const [firstName, setFName] = useState('');
+  const [lastName, setLName] = useState('');
+  // const [reset, setResetSection] = useState({firstName: '', lastName: ''})  
+  let fName = '';
+  let lName = '';
 
   function handleFirstNameChange(e: { target: { value: string; }; }) {
-    firstName = e.target.value;
+    fName = e.target.value;
+    setFName(fName);
   }
 
   function handleLastNameChange(e: { target: { value: string; }; }) {
-    lastName = e.target.value;
+    lName = e.target.value;
+    setLName(lName);
   }
 
   function handleReset() {
-    firstName = '';
-    lastName = '';
+    setFName('');
+    setLName('');
+    // setResetSection({firstName:'', lastName: ''})
   }
 
   return (
