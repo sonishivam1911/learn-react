@@ -15,11 +15,12 @@ import RequestTracker from './qcomps/shoppingCart'
 import Form from './components/updObjects'
 import Scoreboard from './qcomps/updObjectsForm'
 import List from './qcomps/artistsRemoveArr'
+import BucketList from './qcomps/arrObj'
 // Profile
 
 export default function Home() {
   return (
-    <List />
+    <BucketList />
     // <List />
     // <RecipeList />
   )
