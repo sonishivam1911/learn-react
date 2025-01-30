@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function Scoreboard() {
+export default function ListScoreboard() {
   const [player, setPlayer] = useState({
     firstName: 'John Woodrow',
     lastName: 'Wilson',
@@ -8,7 +8,11 @@ export default function Scoreboard() {
   });
 
   function handlePlusClick() {
-    player.likescore++;
+    setPlayer({
+      ...player,
+      likescore: player.likescore + 1,
+    });    
+    // player.likescore++;
   }
 
   function handleFirstNameChange(e: { target: { value: string; }; }) {
@@ -19,7 +23,10 @@ export default function Scoreboard() {
   }
 
   function handleLastNameChange(e: { target: { value: string; }; }) {
-    player.lastName = e.target.value;
+    setPlayer({
+      ...player,
+      lastName: e.target.value,
+    });
   }
 
   return (
