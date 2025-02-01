@@ -10,9 +10,9 @@ import RecipeList from './qcomps/recipes'
 // import Gallery from './components/state'
 import Gallery from './qcomps/state'
 import PersonData from './components/stateObj'
-// import Form from './qcomps/stuckForm'
+import Form from './qcomps/stuckForm'
 import RequestTracker from './qcomps/shoppingCart'
-import Form from './components/updObjects'
+// import Form from './components/updObjects'
 import Scoreboard from './qcomps/updObjectsForm'
 import List from './qcomps/artistsRemoveArr'
 import BucketList from './qcomps/arrObj'
@@ -20,8 +20,15 @@ import BucketList from './qcomps/arrObj'
 
 export default function Home() {
   return (
+    // 1 -for state
+    // <Gallery /> 
+    // 2 - for stuck form
+    // <Form /> 
+    // 3 - shoppingCart
+    // <RequestTracker />
+    // 4 - updObjectsForm
+    // <Scoreboard />
+    // 5 - arrObj
     <BucketList />
-    // <List />
-    // <RecipeList />
   )
 }
